@@ -1,0 +1,24 @@
+# MATLAB files
+*.m~
+*.asv
+*.mat
+*.fig
+*.mex*
+*.p
+*.pri
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Output files
+*.png
+*.pdf
+*.eps
+*.log
+
+# System files
+Thumbs.db
+desktop.ini
