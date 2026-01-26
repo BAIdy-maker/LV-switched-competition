@@ -10,11 +10,11 @@ s_jj1 = 0.06; s_jj2 = 0.05;
 s_ij1 = 0.04; s_ij2 = 0.07;
 s_ji1 = 0.07; s_ji2 = 0.04;
 
-Z1 = 48;
+Z1=48; %%%from the paper%%%
 theta = 0.3;
-Z2 = theta * Z1;
-T = 0.1;
-delta = 0.35;
+Z2=theta * Z1;
+T=0.1;
+delta=0.35;
 K = 100;
 
 % Define vector fields
@@ -25,7 +25,7 @@ f2 = @(x) [r_i2*Z2*(1/(1+x(2)))*x(1) - s_ii2*x(1)^2 - s_ij2*x(1)*x(2);
            r_j2*Z2*(1/(1+x(1)))*x(2) - s_jj2*x(2)^2 - s_ji2*x(1)*x(2)];
 
 % Switching function
-sigma = @(t) (mod(t, T) < delta*T) + 1;
+sigma = @(t) (mod(t, T)<delta*T)+1;
 
 % Initial conditions from the paper
 IC = [20 20; 25 40; 45 45; 55 55; 35 35];
@@ -64,5 +64,5 @@ legend('1/(1+x_i)', '1/(1+x_j)');
 ylim([0 1]);
 
 % Save figure
-saveas(gcf, 'Figure1.png');
-disp('Figure 1 saved as Figure1.png');
+%saveas(gcf, 'Figure1.png');
+%%%by BAIdy%%%%%
