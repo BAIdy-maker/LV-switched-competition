@@ -1,5 +1,4 @@
 %% SENSITIVITY_ANALYSIS - Parameter sensitivity analysis
-% As requested by Reviewer
 
 clear all; close all; clc;
 
@@ -26,7 +25,6 @@ outcomes=zeros(n_variations, 3); % [excl_i, excl_j, coexistence]
 fprintf('Running sensitivity analysis (%d parameter sets)...\n', n_variations);
 
 for k = 1:n_variations
-    % Vary each parameter by ±20%
     params = base_params;
     fields = fieldnames(params);
     for f = 1:length(fields)
@@ -98,7 +96,7 @@ title('Distribution of coexistence outcomes');
 grid on;
 
 % Save results
-save('sensitivity_results.mat', 'outcomes');
-saveas(gcf, 'sensitivity_analysis.png');
-fprintf('\nResults saved to sensitivity_results.mat\n');
-fprintf('Figure saved as sensitivity_analysis.png\n');
+%save('sensitivity_results.mat', 'outcomes');
+%saveas(gcf, 'sensitivity_analysis.png');
+
+    %%%by BAIdy%%%%%
